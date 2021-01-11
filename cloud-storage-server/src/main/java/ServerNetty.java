@@ -12,10 +12,6 @@ public class ServerNetty {
     private static final int PORT = 8189;
     private SocketChannel channel;
 
-    public static void main(String[]args) throws Exception {
-        new ServerNetty().run();
-    }
-
     public void run() throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
