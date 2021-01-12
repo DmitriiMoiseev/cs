@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class ClientApp extends JFrame{
+public class ClientApp_Start extends JFrame{
 
     JPanel panel;
     JTextArea jTextArea;
@@ -15,7 +15,7 @@ public class ClientApp extends JFrame{
     });
 
 
-    public ClientApp() throws HeadlessException {
+    public ClientApp_Start() throws HeadlessException {
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
@@ -57,8 +57,7 @@ public class ClientApp extends JFrame{
         });
     }
 
-
     public static void main(String[] args) {
-        new ClientApp();
+        new ClientApp_Start();
     }
 }
