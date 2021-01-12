@@ -8,7 +8,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 
-public class ServerNetty {
+public class ServerNetty_Start {
     private static final int PORT = 8189;
     private SocketChannel channel;
 
@@ -38,6 +38,10 @@ public class ServerNetty {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
+    }
+
+    public static void main(String[] args) throws Exception {
+        new ServerNetty_Start().run();
     }
 
 }

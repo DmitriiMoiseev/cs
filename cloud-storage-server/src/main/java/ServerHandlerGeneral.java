@@ -38,6 +38,7 @@ public class ServerHandlerGeneral extends SimpleChannelInboundHandler<String> {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
         ctx.close();
+        
     }
 
     @Override
