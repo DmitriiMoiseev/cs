@@ -9,7 +9,7 @@ import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 
 public class ServerNetty_Start {
-    private static final int PORT = 8189;
+    private static final int PORT = 8787;
     private SocketChannel channel;
 
     public void run() throws Exception {

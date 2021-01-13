@@ -9,9 +9,9 @@ public class ClientHandlerGeneral extends SimpleChannelInboundHandler<String> {
     }
 
     @Override
-    protected void messageReceived(ChannelHandlerContext ctx, String msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, String s) throws Exception {
         if (readMessage != null) {
-            readMessage.readMessage(msg);
+            readMessage.readMessage(s);
         }
     }
 }

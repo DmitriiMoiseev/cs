@@ -52,7 +52,8 @@ public class ClientApp_Start extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 clientNetty.sendMessage(jTextField.getText());
-                // TODO: 08.01.2021 настроить отчисту поля, возврат коретки, отправку по нажатию на Return
+                jTextField.setText("");
+                jTextField.grabFocus();
             }
         });
     }
