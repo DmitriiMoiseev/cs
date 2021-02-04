@@ -1,3 +1,5 @@
+import ru.dmitry.client.net.ClientNetty;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -5,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-public class ClientApp_Start extends JFrame{
+public class ClientApp extends JFrame{
 
     JPanel panel;
     JTextArea jTextArea;
@@ -14,13 +16,12 @@ public class ClientApp_Start extends JFrame{
         jTextArea.append((String) arg[0]);
     });
 
-
-    public ClientApp_Start() throws HeadlessException {
+    public ClientApp() throws HeadlessException {
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
         setBounds(dimension.width / 2 - 300, dimension.height / 2 - 250, 600, 500);
-        setTitle("Cloud-Storage-ClientApp");
+        setTitle("Cloud-Storage-ru.dmitry.ClientApp");
         panel = new JPanel(new BorderLayout());
         JPanel jPanel = new JPanel(new BorderLayout());
         jTextArea = new JTextArea();
@@ -59,6 +60,6 @@ public class ClientApp_Start extends JFrame{
     }
 
     public static void main(String[] args) {
-        new ClientApp_Start();
+        new ClientApp();
     }
 }

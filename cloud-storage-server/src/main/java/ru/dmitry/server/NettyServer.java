@@ -1,3 +1,5 @@
+package ru.dmitry.server;
+
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -8,7 +10,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 
-public class ServerNetty_Start {
+public class NettyServer {
     private static final int PORT = 8787;
     private SocketChannel channel;
 
@@ -33,7 +35,6 @@ public class ServerNetty_Start {
             ChannelFuture f = b.bind(PORT).sync();
             System.out.println("Сервер запущен");
             f.channel().closeFuture().sync();
-            System.out.println("3");
         } finally {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
@@ -41,7 +42,7 @@ public class ServerNetty_Start {
     }
 
     public static void main(String[] args) throws Exception {
-        new ServerNetty_Start().run();
+        new NettyServer().run();
     }
 
 }

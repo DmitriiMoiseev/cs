@@ -1,5 +1,8 @@
+package ru.dmitry.client.net;
+
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import ru.dmitry.client.ui.ReadMessage;
 
 public class ClientHandlerGeneral extends SimpleChannelInboundHandler<String> {
     ReadMessage readMessage;
