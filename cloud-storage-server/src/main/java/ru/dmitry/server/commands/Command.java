@@ -5,6 +5,5 @@ import io.netty.channel.ChannelHandlerContext;
 public interface Command {
 
     void action(ChannelHandlerContext chc);
-    void action
 
 }
